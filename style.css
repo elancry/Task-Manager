@@ -1,0 +1,718 @@
+/* GLOBAL ELEMENTS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #000000dc, #3f3e3e);
+  opacity: 1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.6;
+  background: linear-gradient(45deg, #3f3e3e, #000000);
+}
+
+/* CONTAINER BODY */
+
+.container {
+  flex-wrap: wrap;
+  font-family: "Anton", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-image: url("img/white_bricks.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 450px;
+}
+
+/* HEADER SECTION */
+
+.header-section {
+  margin-left: 20em;
+  text-align: center;
+}
+
+
+
+h1 {
+  text-transform: uppercase;
+  font-family: verdana;
+  font-size: 6em;
+  font-weight: 700;
+  color: #383838;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191,
+    1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2),
+    1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  margin-bottom: 2rem;
+}
+
+/* FORM SECTION */
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+input:focus {
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+label {
+  font-size: 30px;
+  color: red;
+}
+
+#title {
+  font-size: 18px;
+  margin-right: 20px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  width: 250px;
+}
+#title:focus {
+  transition: 1s ease;
+  width: 350px;
+}
+
+#title::placeholder {
+  font-size: 18px;
+}
+
+#date,
+#time {
+  border-radius: 10px;
+  padding: 10.5px;
+}
+
+#date {
+  margin-right: 20px;
+}
+
+textarea {
+  line-height: 2.1;
+  font-size: 20px;
+  resize: none;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-family: "Architects Daughter", cursive;
+  background-image: url("img/textarea_wood.jpg");
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-size: cover;
+  padding: 10px 130px 0 150px;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  background-position: center;
+  font-weight: 650;
+  color: black;
+}
+
+textarea::placeholder {
+  color: black;
+  font-weight: 650;
+  font-size: 23px;
+}
+
+/* STYLE FOR ALL ERRORS DIVS */
+
+.errorsDiv {
+  text-align: left;
+  font-size: 19px;
+  margin: 5px 15px;
+  font-weight: 600;
+  color: rgb(255, 0, 0);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* HTML BUTTONS */
+
+.buttons {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-row {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.button-row > div {
+  position: relative;
+  width: 140px;
+  height: 40px;
+  margin: 20px 25px;
+  font-size: 18px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  font-family: "Architects Daughter", cursive;
+}
+
+.button-row > div > a {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-25px);
+  -moz-transform: translateZ(-25px);
+  -ms-transform: translateZ(-25px);
+  -o-transform: translateZ(-25px);
+  transform: translateZ(-25px);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  transition: transform 0.25s;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.button-row > div > a:hover {
+  -webkit-transform: translateZ(-25px) rotateX(-90deg);
+  -moz-transform: translateZ(-25px) rotateX(-90deg);
+  -ms-transform: translateZ(-25px) rotateX(-90deg);
+  -o-transform: translateZ(-25px) rotateX(-90deg);
+  transform: translateZ(-25px) rotateX(-90deg);
+  font-weight: 900;
+  font-size: 20px;
+  transition: 0.8s ease-in-out;
+}
+
+.button-row > div > a::after {
+  -webkit-transform: rotateX(90deg) translateZ(25px);
+  -moz-transform: rotateX(90deg) translateZ(25px);
+  -ms-transform: rotateX(90deg) translateZ(25px);
+  -o-transform: rotateX(90deg) translateZ(25px);
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.button-row > div > a::before {
+  -webkit-transform: rotateY(0deg) translateZ(25px);
+  -moz-transform: rotateY(0deg) translateZ(25px);
+  -ms-transform: rotateY(0deg) translateZ(25px);
+  -o-transform: rotateY(0deg) translateZ(25px);
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+.button-row2 > div > a::before,
+div > a::after {
+  border: 4px solid rgb(255, 182, 47);
+}
+.button-row1 > div > a::before,
+div > a::after {
+  border: 4px solid rgb(131, 209, 13);
+}
+.button-row3 > div > a::before,
+div > a::after {
+  border: 4px solid rgb(230, 30, 30);
+}
+
+.button-row > div > a::before,
+div > a::after {
+  transition: all 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 160px;
+  height: 50px;
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(title);
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-row3 > div > a::after {
+  background-color: #fff;
+  border-color: rgb(230, 30, 30);
+  color: rgb(230, 30, 30);
+}
+.button-row2 > div > a::after {
+  background-color: #fff;
+  border-color: rgb(255, 182, 47);
+  color: rgb(255, 182, 47);
+}
+.button-row1 > div > a::after {
+  background-color: #fff;
+  border-color: rgb(131, 209, 13);
+  color: rgb(131, 209, 13);
+}
+
+.button-row2 > div > a::before {
+  background-color: rgb(255, 182, 47);
+  color: #fff;
+}
+.button-row1 > div > a::before {
+  background-color: rgb(131, 209, 13);
+  color: #fff;
+}
+.button-row3 > div > a::before {
+  background-color: rgb(230, 30, 30);
+  color: #fff;
+}
+
+/* CREATING TASK CARD */
+
+.containerCard {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newTaskDiv {
+  text-align: start;
+  display: inline-block;
+  margin: 25px 48px;
+  background: url("img/task_note.png");
+  background-repeat: no-repeat;
+  height: 420px;
+  width: 413px;
+}
+
+/* keyFrames for new task card */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.task-id {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 900;
+  font-size: 21px;
+  position: relative;
+  top: 38%;
+  color: red;
+  text-align: center;
+}
+
+.title-card {
+  position: relative;
+  text-align: center;
+  top: 40%;
+  color: whitesmoke;
+  margin-bottom: 5px;
+  font-weight: 650;
+  font-family: "Architects Daughter", cursive;
+  padding: 3px;
+  border-radius: 8px;
+  font-size: 25px;
+}
+
+.date-card {
+  position: relative;
+  top: 42%;
+  font-family: "Architects Daughter", cursive;
+  left: 9%;
+  text-align: start;
+  font-weight: 900;
+  padding: 3px 0;
+  border-radius: 8px;
+  font-size: 22px;
+  color: rgb(0, 0, 200);
+}
+.time-card {
+  position: relative;
+  top: 33%;
+  font-family: "Architects Daughter", cursive;
+  right: 9%;
+  font-weight: 900;
+  text-align: end;
+  padding: 3px 0;
+  border-radius: 8px;
+  font-size: 22px;
+  color: rgb(0, 0, 200);
+}
+
+.textarea-card {
+  position: relative;
+  top: 40%;
+  text-align: center;
+  left: 8%;
+  height: 120px;
+  width: 350px;
+  font-family: "Architects Daughter", cursive;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  overflow: auto;
+  word-break: break-all, keep-all;
+}
+
+/* REMOVE BUTTON  */
+
+.trashBtn {
+  opacity: 0;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  bottom: 25%;
+  left: 90%;
+  border: none;
+  padding: 15px 15px 5px 15px;
+}
+.newTaskDiv:hover .trashBtn {
+  transition: 1s ease;
+  opacity: 0.8;
+  cursor: pointer;
+  background-image: url("icons/trash.png");
+  background-repeat: no-repeat;
+}
+
+/* CLOCK SECTION */
+
+.clock {
+  background: #ececec;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  margin-right: 3%;
+  border: 10px solid #333;
+  position: relative;
+  box-shadow: 0 2vw 4vw -1vw rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 2px 4px -1px black;
+}
+
+.hour-hand {
+  position: absolute;
+  z-index: 5;
+  width: 4px;
+  height: 55px;
+  background: #333;
+  top: 55px;
+  transform-origin: 50% 60px;
+  left: 50%;
+  margin-left: -2px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.minute-hand {
+  position: absolute;
+  z-index: 6;
+  width: 4px;
+  height: 90px;
+  background: #666;
+  bottom: 120px;
+  left: 50%;
+  margin-left: -2px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform-origin: 50% 95px;
+}
+
+.second-hand {
+  position: absolute;
+  z-index: 7;
+  width: 2px;
+  height: 105px;
+  background: gold;
+  top: 10px;
+  left: 50%;
+  margin-left: -1px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform-origin: 50% 105px;
+}
+
+span {
+  display: inline-block;
+  position: absolute;
+  color: #333;
+  font-size: 22px;
+  font-family: "Poiret One";
+  font-weight: 700;
+  z-index: 4;
+}
+
+.h12 {
+  top: 20px;
+  left: 50%;
+  margin-left: -9px;
+}
+.h3 {
+  top: 100px;
+  right: 26px;
+}
+.h6 {
+  bottom: 25px;
+  left: 50%;
+  margin-left: -5px;
+}
+.h9 {
+  left: 26px;
+  top: 100px;
+}
+
+.diallines {
+  position: absolute;
+  z-index: 2;
+  width: 2px;
+  height: 8px;
+  background: #666;
+  left: 50%;
+  margin-left: -1px;
+  transform-origin: 50% 113.5px;
+}
+.diallines:nth-of-type(5n) {
+  position: absolute;
+  z-index: 2;
+  width: 4px;
+  height: 20px;
+  background: #666;
+  left: 50%;
+  margin-left: -1px;
+  transform-origin: 50% 113.5px;
+}
+
+.info {
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  border-radius: 7px;
+  background: #ccc;
+  text-align: center;
+  line-height: 20px;
+  color: #000;
+  font-size: 11px;
+  top: 200px;
+  left: 50%;
+  margin-left: -60px;
+  font-family: "Poiret One";
+  font-weight: 700;
+  z-index: 3;
+  letter-spacing: 3px;
+  margin-left: -60px;
+  left: 50%;
+}
+.date {
+  font-size: 14px;
+  top: 65px;
+}
+.day {
+  font-size: 14px;
+  top: 145px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 2500px) {
+  .newTaskDiv {
+    margin: 0 50px 0px 10px;
+  }
+}
+@media screen and (max-width: 2474px) {
+  .newTaskDiv {
+    margin: 0 10px 0px 10px;
+  }
+}
+@media screen and (max-width: 2164px) {
+  .newTaskDiv {
+    margin: 0 30px 0px 80px;
+  }
+}
+@media screen and (max-width: 2090px) {
+  .newTaskDiv {
+    margin: 0 10px 0px 10px;
+  }
+}
+@media screen and (max-width: 1922px) {
+  .newTaskDiv {
+    margin: 0 10px 0px 10px;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .newTaskDiv {
+    margin: 0px 33px 0px 25px;
+  }
+}
+@media screen and (max-width: 1881px) {
+  .newTaskDiv {
+    margin: 0px 10px 0px 15px;
+  }
+}
+@media screen and (max-width: 1751px) {
+  .newTaskDiv {
+    margin: 0px 25px 0px 120px;
+  }
+}
+@media screen and (max-width: 1671px) {
+  .newTaskDiv {
+    margin: 0px 25px 0px 10px;
+  }
+}
+@media screen and (max-width: 1664px) {
+  .newTaskDiv {
+    margin: 0px 25px 0px 90px;
+  }
+}
+@media screen and (max-width: 1580px) {
+  .newTaskDiv {
+    margin: 0px 25px 0px 25px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .newTaskDiv {
+    margin: 0 31px;
+  }
+}
+@media screen and (max-width: 1424px) {
+  .newTaskDiv {
+    margin: 0px 10px 0px 0px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .newTaskDiv {
+    margin: 15px 0px 0px 4px;
+  }
+}
+@media screen and (max-width: 1248px) {
+  .newTaskDiv {
+    margin: 15px 0px 0px 140px;
+  }
+}
+
+@media screen and (max-width: 1129px) {
+  .newTaskDiv {
+    margin: 15px 0px 0px 90px;
+  }
+
+  .header-section {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .newTaskDiv {
+    margin: 15px 0px 0px 67px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .newTaskDiv {
+    margin: 15px 0px 0px 275px;
+  }
+  textarea {
+    width: 95%;
+    margin-left: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .newTaskDiv {
+    margin: 15px 0px 0px 170px;
+  }
+
+  textarea {
+    width: 90%;
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 700px) {
+  textarea {
+    line-height: 1.6;
+    width: 90%;
+    margin-left: 2em;
+    padding: 25px 120px 10px 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .form-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  textarea {
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 600px) {
+  .newTaskDiv {
+    margin-left: 80px;
+  }
+  
+  textarea {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 510px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  textarea {
+    line-height: 1.3;
+    margin-left: 20px;
+  }
+  .newTaskDiv {
+    margin-left: 25px;
+  }
+}

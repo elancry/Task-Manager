@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet" />
+    <title>Project 1 - Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+
+    <section class="header-section">
+      <h1 class="header">
+        <p>Task Board</p>
+      </h1>
+    </section>
+
+    <!-- CONTAINER BODY -->
+
+    <div class="container">
+      <!-- CLOCK SECTION -->
+
+      <div class="clock">
+        <div>
+          <div class="info date"></div>
+          <div class="info day"></div>
+        </div>
+        <div class="dot"></div>
+
+        <div>
+          <div class="hour-hand"></div>
+          <div class="minute-hand"></div>
+          <div class="second-hand"></div>
+        </div>
+
+        <div>
+          <span class="h3">3</span>
+          <span class="h6">6</span>
+          <span class="h9">9</span>
+          <span class="h12">12</span>
+        </div>
+
+        <div class="diallines"></div>
+      </div>
+
+      <!-- FORM SECTION -->
+
+      <div class="form-section">
+        <div class="form-wrapper">
+          <div class="task-title">
+     
+            <input type="text" id="title" placeholder="Task Title" />
+            <div id="title-error" class="errorsDiv"></div>
+          </div>
+
+          <div class="task-date">
+          
+            <input type="date" id="date" />
+            <div id="date-error" class="errorsDiv"></div>
+          </div>
+
+          <div class="task-time">
+            <input type="time" id="time" />
+            <div id="time-error" class="errorsDiv"></div>
+          </div>
+        </div>
+        <!-- TEXT AREA  -->
+
+        <textarea placeholder="* Enter your task here..." name="text" id="text" cols="60" rows="6"></textarea>
+        <div id="text-error" class="errorsDiv"></div>
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+          <div class="button-row button-row1">
+            <div><a class="a1" onclick="onAddTask()" title="SAVE TASK"></a></div>
+          </div>
+          <div class="button-row button-row2">
+            <div><a class="a2" onclick="resetInputsUI()" title="RESET PAPER"></a></div>
+          </div>
+          <div class="button-row button-row3">
+            <div><a class="a3" onclick="removeAllTasks()" title="REMOVE ALL"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="containerCard"></div>
+
+    <!-- JAVA SCRIPT SOURCE -->
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  </body>
+</html>
