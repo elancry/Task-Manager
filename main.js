@@ -7,11 +7,10 @@ function onAddTask() {
   let title = document.getElementById("title");
 
   try {
-    validateInput(date, text, title);
+    // validateInput(date, text, title);
     notesArr = saveTasks(time, date, text, title);
     addFullNoteCard(containerTask, notesArr, notesArr.length - 1);
-    resetInputsUI()
-
+    // resetInputsUI();
     console.log("Succssesfully");
   } catch (error) {
     console.log(error);
@@ -44,17 +43,12 @@ function validateInput(date, text, title) {
 // Function that show you all the errors.
 function showError(id, errorMessage) {
   if (!errorMessage) return;
-  let node = document.getElementById(id);
-  node.style.border = "2px solid red";
-
   let errorsNode = document.getElementById(id + "-error");
   errorsNode.innerHTML = errorMessage;
 }
 
 // Function that cleans all the errors.
 function cleanErrorFromElement(id) {
-  let node = document.getElementById(id);
-  node.style.border = "";
   let errorsNode = document.getElementById(id + "-error");
   errorsNode.innerHTML = "";
 }
@@ -92,13 +86,12 @@ function addFullNoteCard(containerTask, notesArr, index) {
 function getTaskCard(createdNewTask, notesArr, index) {
   createdNewTask.setAttribute("id", notesArr[index].id);
   createdNewTask.setAttribute("class", "newTaskDiv");
-  createdNewTask.style.animation = "fadeIn 2s";
+  createdNewTask.style.animation = "fadeIn 1s";
 }
 
 function getTaskTitle(createdNewTask, notesArr, index) {
   let taskTitle = document.createElement("div");
   taskTitle.setAttribute("class", "title-card");
-
   taskTitle.innerHTML = notesArr[index].title;
   createdNewTask.append(taskTitle);
 }
